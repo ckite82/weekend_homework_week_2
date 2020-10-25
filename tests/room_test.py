@@ -6,12 +6,12 @@ from classes.room import *
 class TestRoom(unittest.TestCase):
 
     def setUp(self):
-        self.guest_1 = Guest("Patrick Mahomes", 25, "Hotel California")
-        self.guest_2 = Guest("Barry Sanders", 52, "Highway to Hell")
-        self.guest_3 = Guest("Drew Brees", 41, "Born in the USA")
-        self.guest_4 = Guest("Matt Ryan", 35, "Black Betty")
-        self.guest_5 = Guest("Aaron Rodgers", 36, "Born to be Wild")
-        self.guest_6 = Guest("Tom Brady", 43, "Ace of Spades")
+        self.guest_1 = Guest("Patrick Mahomes", 25, "Hotel California", 50)
+        self.guest_2 = Guest("Barry Sanders", 52, "Highway to Hell", 30)
+        self.guest_3 = Guest("Drew Brees", 41, "Born in the USA", 100)
+        self.guest_4 = Guest("Matt Ryan", 35, "Black Betty", 60)
+        self.guest_5 = Guest("Aaron Rodgers", 36, "Born to be Wild", 20)
+        self.guest_6 = Guest("Tom Brady", 43, "Ace of Spades", 35)
         self.song_1 = Song("Hotel California", "Classic Rock")
         self.song_2 = Song("Highway to Hell", "Classic Rock")
         self.song_3 = Song("Born in the USA", "Classic Rock")
@@ -54,3 +54,10 @@ class TestRoom(unittest.TestCase):
         self.room.add_song(self.song_2)
         self.room.add_song(self.song_5)
         self.assertEqual(3, self.room.songs_in_playlist())
+
+    # def test_room_occupancy_level(self):
+    #     self.room.add_guest(self.guest_1)
+    #     self.room.add_guest(self.guest_2)
+    #     self.room.add_guest(self.guest_3)
+    #     self.room.add_guest(self.guest_4)
+    #     self.assertEqual(4, self.room.max_occupancy())

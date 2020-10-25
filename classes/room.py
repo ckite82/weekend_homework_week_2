@@ -24,3 +24,11 @@ class Room:
 
     def add_song(self, song_to_add):
         self.song_playlist.append(song_to_add)
+
+    # def max_occupancy(self):
+    #     if self.guests_in_room_total >= 3:
+    #         return "Room full, sorry! Why not try the Power Ballads room"
+    #     else:
+    #         return "Welcome to the Classic Rock room! Rock on!"
+
+    
